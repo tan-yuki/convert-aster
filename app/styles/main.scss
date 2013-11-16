@@ -94,8 +94,40 @@ li {
     list-style-type: none;
 }
 
-.container {
-    .footer {
-        padding-top: 30px;
-    }
+.footer {
+    margin-top: 30px;
+}
+
+.base-img-workspace {
+    text-align: center;
+}
+
+.base-img {
+    margin: 20px;
+    border:solid 1px #ccc;
+    padding: 8px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.upload-img-btn {
+    margin: 10px 0 0 0;
+}
+
+.plus {
+    font-size: 4em;
+    padding-top: 77px;
+    color: #999;
+}
+
+.right-arrow {
+    font-size: 3em;
+    padding-top: 95px;
+    color: #999;
+}
+
+.workspace-setting {
+    padding-top: 10px;
+    text-align: left;
 }
