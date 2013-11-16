@@ -1,6 +1,8 @@
 // Generated on 2013-11-12 using generator-webapp 0.4.4
 'use strict';
 
+var path = require('path');
+
 // # Globbing
 // for performance reasons we're only matching one level down:
 // 'test/spec/{,*/}*.js'
@@ -54,7 +56,10 @@ module.exports = function (grunt) {
                         '.tmp',
                         '<%= yeoman.app %>'
                     ]
-                }
+                },
+                task: [
+                    'express:livereload'
+                ]
             },
             test: {
                 options: {
@@ -284,6 +289,19 @@ module.exports = function (grunt) {
                 'svgmin',
                 'htmlmin'
             ]
+        },
+        express: {
+            options: {
+                port: 9000,
+                hostname: 'localhost'
+            },
+            livereload: {
+                options: {
+                    open: true,
+                    livereload: 35729,
+                    bases: [path.resolve('.tmp'), path.resolve(__dirname, 'app')],
+                }
+            }
         }
     });
 
@@ -296,7 +314,8 @@ module.exports = function (grunt) {
             'clean:server',
             'concurrent:server',
             'autoprefixer',
-            'connect:livereload',
+//            'connect:livereload',
+            'express:livereload',
             'watch'
         ]);
     });
